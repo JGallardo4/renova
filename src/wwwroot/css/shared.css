@@ -1,0 +1,30 @@
+﻿@import "base/_colors.css";
+@import "base/_fonts.css";
+@import "base/_hyperlinks.css";
+@import "base/_reset.css";
+@import "base/_navbar.css";
+
+/* Layout */
+  body {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+
+    margin: 0;
+    min-height: 100vh;
+  }
+
+    header {
+      grid-row: 1;
+      grid-column: 1;
+      
+      height: 40px;
+      border-bottom: solid;
+      border-width: 2px;
+      border-color: white;
+    }    
+
+    footer {
+      grid-row: 3;
+    }
+/* End of layout */

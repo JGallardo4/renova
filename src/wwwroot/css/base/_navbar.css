@@ -1,0 +1,34 @@
+/* Layout */
+	nav {
+		display: flex;
+	}
+/* End of layout */
+
+/* Show/Hide stream */
+	.toggle + .toggle-label::before {
+		content: "》 Show";
+	}
+
+	.toggle:checked + .toggle-label::before {
+		content: "︾ Hide";
+	}
+
+	.toggle ~ .twitch-embed { display: none; }
+	.toggle:checked ~ .twitch-embed { display: block; }	
+
+	.toggle-label {
+		height: 100%;
+		cursor: pointer;
+		display: grid;
+		place-items: center;
+		color: var(--yellow);
+	}
+
+	.toggle { display: none; }
+/* Show/Hide stream */
+
+/* Cosmetic styles */
+	nav ul {
+		display: flex;
+	}
+/* End cosmetic styles */
