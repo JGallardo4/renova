@@ -41,25 +41,19 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-				</li>
-
-				<li class="nav-item">
 					<a class="nav-link" asp-area="" asp-controller="About" asp-action="Index">About us</a>
 				</li>
 			</ul><!-- End of navbar items -->
 		</nav>
 	</header>
 
-	<div class="container">
-		<main role="main">
-			@RenderBody()
-		</main>
-	</div>
+	<main role="main">
+		@RenderBody()
+	</main>
 
 	<footer>
-		<div class="container">
-			&copy; 2020 - Renova - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+		<div>
+			&copy; 2020 - Renova - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>	
 		</div>
 	</footer>
 

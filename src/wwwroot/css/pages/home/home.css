@@ -10,8 +10,34 @@ header {
 	backdrop-filter: blur(5px);
 }
 
-.container { /* Overlap navbar over image slider */ 
-	grid-row: 1 / 3;
+main { /* Overlap navbar over image slider */ 
+	grid-row: 1 / 4;
 	grid-column: 1;
 	z-index: 1;
+}
+
+#promo { /* Overlap promo over image slider */
+	z-index: 2;
+	place-self: center;
+	position: absolute;
+	width: 100%;
+	top: 400px;
+	left: 0;
+	font-size: 30pt;
+	color: white;
+	text-align: center;
+}
+
+footer {
+	border-top: solid;
+	border-width: 2px;
+	border-color: white;
+	color: white;
+	display: grid;
+	align-items: center;
+}
+
+footer div {
+	padding-left: 20px;
+	padding-right: 20px;
 }
