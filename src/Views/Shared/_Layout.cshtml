@@ -7,36 +7,47 @@
 	<title>@ViewData["Title"] - Renova</title>
 	
 	@RenderSection("Style", required: true)
+
+	<script src="https://kit.fontawesome.com/df3d0cc377.js"
+		crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<header>
-		<nav class="navbar">
-				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
+		<nav>
+			<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
 
-				<input 
-				class="toggle"
-				id="nav-checkbox"
-				type="checkbox" />
+			<input 
+			class="toggle"
+			id="nav-checkbox"
+			type="checkbox" />
 
-				<label for="nav-checkbox" class="hamburger">					
-				</label>
+			<label for="nav-checkbox" class="hamburger">					
+			</label>
 
-				<div class="navbar-collapse">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-						</li>
+			<ul id="nav-items">
+				<li class="nav-item">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					
+					<a href="1-587-990-4692">+1-587-990-4692</a>
+				</li>
 
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">About us</a>
-						</li>
+				<li class="nav-item">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
 
-						<li class="nav-item">
-							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-						</li>
-					</ul>
-				</div> <!-- End of navbar items -->
+					<a href = "mailto:info@renovacontracting.ca">
+					info@renovacontracting.ca
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" asp-area="" asp-controller="About" asp-action="Index">About us</a>
+				</li>
+			</ul><!-- End of navbar items -->
 		</nav>
 	</header>
 
