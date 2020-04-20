@@ -16,7 +16,7 @@ main { /* Overlap navbar over image slider */
 	z-index: 1;
 }
 
-#promo { /* Overlap promo over image slider */
+#overlay { /* Overlap content over image slider */
 	z-index: 2;
 	place-self: center;
 	position: absolute;

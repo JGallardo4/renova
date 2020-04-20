@@ -14,8 +14,43 @@
 	<li class="slide showing"></li>
 	<li class="slide"></li>
 	<li class="slide"></li>
+	<li class="slide"></li>
+	<li class="slide"></li>
 </ul>
 
-<div id="promo">
+<div id="overlay">
+	<button class="slider-controls" id="previous"><</button>
+	<button class="slider-controls" id="next">></button>
+
 	Quality, custom home renovations in Edmonton and area.
 </div>
+
+<script type="text/javascript">
+	var slides = document.querySelectorAll('#image-slider .slide');
+	var currentSlide = 0;
+
+	function nextSlide() {
+		goToSlide(currentSlide + 1);
+	}
+
+	function previousSlide() {
+		goToSlide(currentSlide - 1);
+	}
+
+	function goToSlide(n) {
+		slides[currentSlide].className = 'slide';
+		currentSlide = (n + slides.length) % slides.length;
+		slides[currentSlide].className = 'slide showing';
+	}
+
+	var next = document.getElementById('next');
+	var previous = document.getElementById('previous');
+
+	next.onclick = function() {
+		nextSlide();
+	};
+
+	previous.onclick = function() {
+		previousSlide();
+	};
+</script>
