@@ -1,5 +1,5 @@
 /* Layout */
-	nav {
+	#contact-info {
 		display: flex;		
 		align-items: center;
 		
@@ -8,10 +8,14 @@
 		padding-right: 20px;
 	}
 	
-	#nav-items {
+	#contact-items {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: flex-end;
 		width: 100%;
+	}
+
+	#contact-info li {
+		padding-left: 20px;
 	}
 /* End of layout */
 
@@ -39,5 +43,7 @@
 /* Show/Hide stream */
 
 /* Cosmetic styles */
-	
+	#contact-info {
+		color: white;
+	}
 /* End cosmetic styles */
