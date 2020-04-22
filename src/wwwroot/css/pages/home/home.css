@@ -14,14 +14,35 @@ main { /* Overlap navbar over image slider */
 
 #overlay { /* Overlap content over image slider */
 	z-index: 2;
-	place-self: center;
-	position: absolute;
-	width: 100%;
-	top: 400px;
-	left: 0;
 	font-size: 30pt;
 	color: white;
 	text-align: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+
+	display: grid;
+	grid-template-columns: 70px 1fr 70px;
+	grid-template-rows: 1fr;
+	place-items: center;
+}
+
+#previous {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#next {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+#description {
+	grid-column: 2;
+	grid-row: 1;
 }
 
 footer {
