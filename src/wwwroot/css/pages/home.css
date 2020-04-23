@@ -30,10 +30,23 @@ main { /* Overlap navbar over image slider */
 	place-items: center;
 }
 
-#overlay a {
+#description {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#description p {
+	text-shadow: 2px 2px black;
+	padding: 10px
+}
+
+#description a {
 	font-size: 25pt;
 	padding: 10px;
-	background-color: var(--accent3);
+	background-color: var(--accent4);
 	border-radius: 5px;
 }
 
@@ -62,6 +75,17 @@ footer {
 }
 
 footer div {
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
+
+/* Logo styles */
+	#logo #column,
+	#logo #slogan {
+		fill: white;
+	}
+
+	#logo #renova {
+		fill: var(--accent4)
+	}
+/* End of logo styles */
