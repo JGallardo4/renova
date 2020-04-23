@@ -1,0 +1,17 @@
+/* Layout */
+	nav ul {
+		display: flex;
+		justify-content: flex-start;
+		padding: 5px;
+	}
+
+	nav ul li {
+		margin: 5px;
+	}
+/* End of layout */
+
+/* Cosmetic styles */
+	nav {
+		color: white;
+	}
+/* End cosmetic styles */

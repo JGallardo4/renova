@@ -13,34 +13,42 @@
 </head>
 
 <body>
-	<header>
-		<div id="contact-info">
-			<a asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
+	<header>	
+		<ul id="contact-info">
+			<li>
+				<a asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
+			</li>
+			
+			<li>
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				
+				<a href="1-587-990-4692">+1-587-990-4692</a>
+			</li>
 
-			<input 
-			class="toggle"
-			id="nav-checkbox"
-			type="checkbox" />
+			<li>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
 
-			<label for="nav-checkbox" class="hamburger">					
-			</label>
+				<a href = "mailto:info@renovacontracting.ca">
+				info@renovacontracting.ca
+				</a>
+			</li>
+		</ul><!-- End of contact info -->
 
-			<ul id="contact-items">
+		<nav>
+			<ul>
 				<li>
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					
-					<a href="1-587-990-4692">+1-587-990-4692</a>
+					<a asp-area="" asp-controller="About" asp-action="Index">About</a>
 				</li>
 
 				<li>
-					<i class="fa fa-envelope-o" aria-hidden="true"></i>
-
-					<a href = "mailto:info@renovacontracting.ca">
-					info@renovacontracting.ca
-					</a>
+					<a asp-area="" asp-controller="Gallery" asp-action="Index">Gallery</a>
 				</li>
-			</ul><!-- End of navbar items -->
-		</div><!-- End of contact-info -->
+
+				<li>
+					<a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+				</li>
+			</ul>
+		</nav>		
 	</header>
 
 	<main role="main">

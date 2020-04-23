@@ -2,7 +2,8 @@
 @import "base/_fonts.css";
 @import "base/_hyperlinks.css";
 @import "base/_reset.css";
-@import "base/_contact-info.css";
+@import "components/_contact-info.css";
+@import "components/_navbar.css";
 
 /* Layout */
   body {

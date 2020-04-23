@@ -8,10 +8,8 @@
 		padding-right: 20px;
 	}
 	
-	#contact-items {
-		display: flex;
-		justify-content: flex-end;
-		width: 100%;
+	#contact-info li:nth-of-type(1) {
+		flex-grow: 1;
 	}
 
 	#contact-info li {
@@ -19,7 +17,13 @@
 	}
 /* End of layout */
 
-/* Show/Hide stream */
+/* Cosmetic styles */
+	#contact-info {
+		color: white;
+	}
+/* End cosmetic styles */
+
+/* Hamburger menu */
 	.toggle + .toggle-label::before {
 		content: "》 Show";
 	}
@@ -42,8 +46,4 @@
 	.toggle { display: none; }
 /* Show/Hide stream */
 
-/* Cosmetic styles */
-	#contact-info {
-		color: white;
-	}
-/* End cosmetic styles */
+
