@@ -1,5 +1,5 @@
-@import "../../shared.css";
-@import "../../components/_image-slider.css";
+@import "../shared.css";
+@import "../components/_image-slider.css";
 
 header {
 	z-index: 3;
@@ -28,6 +28,13 @@ main { /* Overlap navbar over image slider */
 	grid-template-columns: 70px 1fr 70px;
 	grid-template-rows: 1fr;
 	place-items: center;
+}
+
+#overlay a {
+	font-size: 25pt;
+	padding: 10px;
+	background-color: var(--accent3);
+	border-radius: 5px;
 }
 
 #previous {

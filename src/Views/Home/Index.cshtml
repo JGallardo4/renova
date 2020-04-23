@@ -3,7 +3,7 @@
 		href="/css/shared.css" />
 
 	<link rel="stylesheet"
-		href="/css/pages/home/home.css" />
+		href="/css/pages/home.css" />
 }
 
 @{
@@ -21,7 +21,10 @@
 <div id="overlay">
 	<button class="slider-controls" id="previous"><</button>
 	<button class="slider-controls" id="next">></button>
-	<div id="description">Quality, custom home renovations in Edmonton and area.</div>	
+	<div id="description">
+		Quality, custom home renovations in Edmonton and area.
+		<a asp-area="" asp-controller="Contact" asp-action="Index">Get a free estimate</a>
+	</div>	
 </div>
 
 <script type="text/javascript">
