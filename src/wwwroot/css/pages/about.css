@@ -1,1 +1,5 @@
 @import "../shared.css";
+
+header { 
+	display: grid;
+}

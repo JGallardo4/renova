@@ -66,18 +66,25 @@ main { /* Overlap navbar over image slider */
 }
 
 footer {
-	border-top: solid;
-	border-width: 2px;
 	border-color: white;
 	color: white;
-	display: grid;
-	align-items: center;
 }
 
 footer div {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
+/* Cosmetic styles */
+	#contact-info {
+		color: white;
+		border-color: white;
+	}
+
+	nav {
+		color: white;
+	}
+/* End cosmetic styles */
 
 /* Logo styles */
 	#logo #column,

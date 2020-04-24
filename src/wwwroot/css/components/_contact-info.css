@@ -16,12 +16,6 @@
 	}
 /* End of layout */
 
-/* Cosmetic styles */
-	#contact-info {
-		color: white;
-	}
-/* End cosmetic styles */
-
 /* Hamburger menu */
 	.toggle + .toggle-label::before {
 		content: "》 Show";
