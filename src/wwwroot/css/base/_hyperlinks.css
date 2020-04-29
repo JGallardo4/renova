@@ -1,6 +1,6 @@
 /* Link styles */
 main a:link {
-	color: var(--bg-accent-color);
+	color: var(--accent4);
 	text-decoration: none;
 }
 

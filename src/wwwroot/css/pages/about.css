@@ -1,5 +1,37 @@
 @import "../shared.css";
 
-header { 
-	display: grid;
-}
+/* Layout */
+	header { 
+		display: grid;
+	}
+
+	main {
+		padding: 20px;
+	}
+/* End of layout */
+
+/* Cosmetic */
+	h1 {
+		font-size: 2rem;
+		padding-bottom: 10px;
+	}
+
+	p {
+		padding-bottom: 10px;
+	}
+
+	#contact-info {
+		color: black;
+		background-color: var(--base);
+	}
+
+	nav {
+		color: white;
+		background-color: var(--accent3);
+	}
+
+	main {
+		color: white;
+		background-color: var(--accent1);
+	}
+/* End of cosmetic */
