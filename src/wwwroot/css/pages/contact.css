@@ -1,1 +1,73 @@
 @import "../shared.css";
+
+/* Layout */
+	main {
+		display: grid;
+		place-items: center;
+	}
+
+	#email-form {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		grid-template-rows: auto auto auto 1fr auto;
+		place-items: center;
+		gap: 20px;		
+	}
+		#name-label {
+			grid-column: 1;
+			grid-row: 1;
+			justify-self: start;	
+		}
+
+		#name-input {
+			grid-column: 2;
+			grid-row: 1;
+			justify-self: stretch;
+		}
+
+		#address-label {
+			grid-column: 1;
+			grid-row: 2;
+			justify-self: start;	
+		}
+
+		#address-input {
+			grid-column: 2;
+			grid-row: 2;
+			justify-self: stretch;
+		}
+
+		#message-label {
+			grid-column: 1 / 3;
+			grid-row: 3;
+			justify-self: start;
+		}
+
+		#message-input {
+			grid-column: 1 / 3;
+			grid-row: 4;
+			place-self: stretch;
+		}
+
+		#submit {
+			grid-column: 1 / 3;
+			grid-row: 5;
+		}
+/* End of layout */
+
+/* Cosmetic */
+	#contact-info {
+		color: black;
+		background-color: var(--base);
+	}
+
+	nav {
+		color: white;
+		background-color: var(--accent3);
+	}
+
+	main {
+		color: white;
+		background-color: var(--accent1);
+	}
+/* End of cosmetic */

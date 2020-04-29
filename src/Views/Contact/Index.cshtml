@@ -13,19 +13,19 @@
 }
 
 <form id="email-form" method="post">
-	<label asp-for="SenderName">Name:</label>
-	<input asp-for="SenderName" /> <br>
+	<label asp-for="SenderName" id="name-label">Name:</label>
+	<input asp-for="SenderName" id="name-input"/> <br>
 
-	<label asp-for="SenderEmailAddress">Your email address:</label>
-	<input asp-for="SenderEmailAddress" /> <br>
+	<label asp-for="SenderEmailAddress" id="address-label">Your email address:</label>
+	<input asp-for="SenderEmailAddress" id="address-input" /> <br>
 
-	<label asp-for="Message">Message:</label><br>
-	<textarea	asp-for="Message"
-	rows="4"
-	cols="20">
+	<label asp-for="Message" id="message-label">Message:</label><br>
+	<textarea	asp-for="Message" id="message-input"
+	rows="20"
+	cols="50">
 	</textarea><br>
 	
-	<button type="submit">
+	<button type="submit" id="submit">
 		Send
 	</button>
 </form>
