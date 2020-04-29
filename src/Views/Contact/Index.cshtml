@@ -1,3 +1,7 @@
+@using Renova.ViewModels.Contact
+
+@model EmailViewModel
+
 @section Style {
 	<link rel="stylesheet"
 		href="/css/pages/contact.css" />
@@ -5,4 +9,23 @@
 
 @{
 	ViewData["Title"] = "Contact";
+	ViewData["Description"] = "Submit an inquiry by email";
 }
+
+<form id="email-form" method="post">
+	<label asp-for="SenderName">Name:</label>
+	<input asp-for="SenderName" /> <br>
+
+	<label asp-for="SenderEmailAddress">Your email address:</label>
+	<input asp-for="SenderEmailAddress" /> <br>
+
+	<label asp-for="Message">Message:</label><br>
+	<textarea	asp-for="Message"
+	rows="4"
+	cols="20">
+	</textarea><br>
+	
+	<button type="submit">
+		Send
+	</button>
+</form>

@@ -3,4 +3,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.6.0" />
+  </ItemGroup>
 </Project>
