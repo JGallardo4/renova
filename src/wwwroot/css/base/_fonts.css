@@ -2,3 +2,8 @@
 	font-family: 'Myriad';
 	src: url('/fonts/MyriadPro-Regular.ttf');
 }
+
+html { font-size: calc(1em + 0.80vw); }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+p { font-size: 1em; }

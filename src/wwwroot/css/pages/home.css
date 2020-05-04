@@ -14,7 +14,6 @@ main { /* Overlap navbar over image slider */
 
 #overlay { /* Overlap content over image slider */
 	z-index: 2;
-	font-size: 30pt;
 	color: white;
 	text-align: center;
 
@@ -44,7 +43,6 @@ main { /* Overlap navbar over image slider */
 }
 
 #description a {
-	font-size: 25pt;
 	padding: 10px;
 	background-color: var(--accent4);
 	border-radius: 5px;
@@ -77,6 +75,10 @@ footer {
 	}
 
 	nav {
+		color: white;
+	}
+
+	#brand {
 		color: white;
 	}
 /* End cosmetic styles */

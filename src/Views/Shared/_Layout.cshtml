@@ -13,34 +13,33 @@
 </head>
 
 <body>
-	<header>	
-		<ul id="contact-info">
-			<li>
-				<a asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
-			</li>
-			
-			<li>
-				<i class="fa fa-phone" aria-hidden="true"></i>
-				
-				<a href="1-587-990-4692">+1-587-990-4692</a>
-			</li>
+	<header>
+		<div id="contact-info">
+			<a id="brand" asp-area="" asp-controller="Home" asp-action="Index">Renova</a>
 
-			<li>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+			<ul>			
+				<li>
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					
+					<a href="1-587-990-4692">+1-587-990-4692</a>
+				</li>
 
-				<a href = "mailto:info@renovacontracting.ca">
-				info@renovacontracting.ca
-				</a>
-			</li>
-		</ul><!-- End of contact info -->
+				<li>
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
 
+					<a href = "mailto:info@renovacontracting.ca">
+					info@renovacontracting.ca
+					</a>
+				</li>
+			</ul>
+		</div><!-- End of contact info -->
+		
 		<nav>
-			<ul>
-				<!--
+			<ul>				
 				<li>
 					<a asp-area="" asp-controller="About" asp-action="Index">About</a>
 				</li>
-
+				<!--
 				<li>
 					<a asp-area="" asp-controller="Gallery" asp-action="Index">Gallery</a>
 				</li>
