@@ -1,3 +1,7 @@
+@using Renova.Models.Gallery
+
+@model IEnumerable<GallerySection>
+
 @section Style {
 	<link rel="stylesheet"
 		href="/css/pages/gallery.css" />
@@ -5,4 +9,18 @@
 
 @{
 	ViewData["Title"] = "Gallery";
+	ViewData["Description"] = 
+		"Check out the transformations made possible during our past projects.";
+}
+
+@foreach (var gallerySection in Model)
+{
+	<h1>@gallerySection.Name</h1>
+
+	@foreach (var image in gallerySection.Images)
+	{
+		<h2>@image.Stage.ToString()</h2>
+
+		<img src=@image.ImageUrl />	
+	}
 }

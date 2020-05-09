@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Net;
-using System.Net.Mail;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Renova.Data;
+using System;
 
 namespace Renova
 {
@@ -20,6 +22,15 @@ namespace Renova
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration["Database:ConnectionString"];				
+
+			services.AddDbContext<AppDbContext>(options =>
+				options.UseMySql(connectionString,
+					mySqlOptions => 
+					{
+						mySqlOptions.ServerVersion(new Version(10, 4, 12), ServerType.MariaDb);
+					}));
+                    
             services.AddControllersWithViews();
         }
 

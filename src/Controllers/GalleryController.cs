@@ -1,18 +1,33 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Renova.Data;
+using Renova.Models.Gallery;
 
 namespace Renova.Controllers
 {
 	/// <summary>
-	///	Contains all actions for displaying, and updating the about-us blurb.
+	///	Contains all actions for displaying, and updating the image gallery.
 	/// </summary>
 	public class GalleryController : Controller
 	{
+		private readonly AppDbContext _appDbContext;
+
+		public GalleryController(AppDbContext dbContext)
+		{
+			_appDbContext = dbContext;
+		}
+
 		/// <summary>
-		///	Displays a blurb about the guild. 		
+		///	Displays the image gallery separated in different sections		
 		/// </summary>
 		public IActionResult Index()
-		{			
-			return View();
+		{
+			IEnumerable<GallerySection> model = _appDbContext
+				.GallerySections
+				.Include( g => g.Images);
+
+			return View(model);
 		}
 	}
 }
