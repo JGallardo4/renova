@@ -1,6 +1,6 @@
 @using Renova.Models.Gallery
 
-@model IEnumerable<GallerySection>
+@model IEnumerable<Project>
 
 @section Style {
 	<link rel="stylesheet"
@@ -13,14 +13,16 @@
 		"Check out the transformations made possible during our past projects.";
 }
 
-@foreach (var gallerySection in Model)
+@foreach (var project in Model)
 {
-	<h1>@gallerySection.Name</h1>
+	<h1>@project.Name</h1>
 
-	@foreach (var image in gallerySection.Images)
-	{
-		<h2>@image.Stage.ToString()</h2>
+	<div class="image-grid">
+		@foreach (var imageName in project.Images)
+		{
+			var imageUrl = project.Directory + imageName;
 
-		<img src=@image.ImageUrl />	
-	}
+			<img src=@imageUrl />	
+		}
+	</div>	
 }

@@ -40,30 +40,30 @@
 
 /* Images */
 	.slide:nth-of-type(1) {
-		background-image: url("/images/living room/main-1.jpg");
+		background-image: url("/images/gallery/House1/after/house1_after_decoratedwide.jpg");
 		
 	}
 
 	.slide:nth-of-type(2) {
-		background-image: url("/images/kitchen/main-2.jpg");
+		background-image: url("/images/gallery/House1/after/house1_after_kitchen3.jpg");
 		background-size: cover;
 		filter: brightness(80%);
 	}
 
 	.slide:nth-of-type(3) {
-		background-image: url("/images/living room/main-3.jpg");
+		background-image: url("/images/gallery/House1/after/house1_after_livingroom3.jpg");
 		background-size: cover;
 		filter: brightness(80%);
 	}
 
 	.slide:nth-of-type(4) {
-		background-image: url("/images/kitchen/main-4.jpg");
+		background-image: url("/images/gallery/House1/after/house1_after_kitchen4.jpg");
 		background-size: cover;
 		filter: brightness(80%);
 	}
 
 	.slide:nth-of-type(5) {
-		background-image: url("/images/kitchen/main-5.jpg");
+		background-image: url("/images/gallery/House2/after/house2_after_kitchen.jpg");
 		background-size: cover;
 		filter: brightness(80%);
 	}

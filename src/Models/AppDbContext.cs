@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Renova.Models.Gallery;
 
@@ -9,69 +11,44 @@ namespace Renova.Data
 		{			
 		}
 
-        public DbSet<GallerySection> GallerySections { get; set; }
-        public DbSet<Image> Images { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
             base.OnModelCreating(modelBuilder);
 
-            // Seed GallerySection data
-			modelBuilder.Entity<GallerySection>().HasData(
-				new GallerySection
-				{
-                    GallerySectionId = 1,
-                    Name = "Kitchen"
-                },
-                
-                new GallerySection
-				{
-                    GallerySectionId = 2,
-                    Name = "Living Room"
-                },
+            // Set up backing field for sting[]
+            modelBuilder.Entity<Project>()
+                .Property(p => p.Images)
+                .HasConversion(
+                    v => string.Join(';', v),
+                    v => v.Split(';', StringSplitOptions.RemoveEmptyEntries) 
+                );
 
-                new GallerySection
+            // Seed Project data
+			modelBuilder.Entity<Project>().HasData(
+				new Project
 				{
-                    GallerySectionId = 3,
-                    Name = "Bathroom"
-                },
-                
-                new GallerySection
-				{
-                    GallerySectionId = 4,
-                    Name = "Office"
-                },
-                
-                new GallerySection
-				{
-                    GallerySectionId = 5,
-                    Name = "Others"
-                });
-
-			// Seed Image data
-			modelBuilder.Entity<Image>().HasData(
-				new Image
-				{
-                    ImageId = 1,
-                    GallerySectionId = 1,
-                    Stage = StageEnum.Before,
-                    ImageUrl = "/images/kitchen/kitchen1_before_1.jpg"
-                },
-                
-                new Image
-				{
-                    ImageId = 2,
-                    GallerySectionId = 1,
-                    Stage = StageEnum.During,
-                    ImageUrl = "/images/kitchen/kitchen1_during_1.jpg"
-                },
-                
-                new Image
-				{
-                    ImageId = 3,
-                    GallerySectionId = 1,
-                    Stage = StageEnum.After,
-                    ImageUrl = "/images/kitchen/kitchen1_after_1.jpg"
+                    ProjectId = 1,
+                    Name = "Millwoods Project",
+                    Directory = "/images/gallery/Millwoods/after/",
+                    Images = new string[]
+                    {
+                        "house1_after_backentrance.jpg",
+                        "house1_after_bathroom.jpg",
+                        "house1_after_bathroom2.jpg",
+                        "house1_after_decoratedwide.jpg",
+                        "house1_after_diningarea.jpg",
+                        "house1_after_kitchen1.jpg",
+                        "house1_after_kitchen2.jpg",
+                        "house1_after_kitchen3.jpg",
+                        "house1_after_kitchen4.jpg",
+                        "house1_after_livingroom.jpg",
+                        "house1_after_livingroom2.jpg",
+                        "house1_after_livingroom3.jpg",
+                        "house1_after_wideshot.jpg",
+                        "kitchen1_after_1.jpg"
+                    }
                 });
         }
     }

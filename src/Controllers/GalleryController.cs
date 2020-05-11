@@ -23,9 +23,8 @@ namespace Renova.Controllers
 		/// </summary>
 		public IActionResult Index()
 		{
-			IEnumerable<GallerySection> model = _appDbContext
-				.GallerySections
-				.Include( g => g.Images);
+			IEnumerable<Project> model = _appDbContext
+				.Projects;
 
 			return View(model);
 		}

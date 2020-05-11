@@ -7,16 +7,19 @@ namespace Renova.Models.Gallery
     /// <summary>
 	///	Contains information for displaying all the photos for a Section of the Gallery.
 	/// </summary>
-    public class GallerySection
+    public class Project
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-		public int GallerySectionId { get; set; }
+		public int ProjectId { get; set; }
         
         [Required]
 		[StringLength(100)]		
 		public string Name { get; set; }
 
         [Required]
-        public List<Image> Images { get; set; }
+        public string Directory { get; set; } 
+
+        [Required]
+        public string[] Images { get; set; }        
     }
 }
