@@ -1,0 +1,53 @@
+/* Essential styles */
+    #lightbox-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto 1fr;
+    }
+
+    .slide {
+        display: none;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .close-icon {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        text-align: right;
+    }
+
+    .prev {
+        grid-column: 1;
+        grid-row: 2;
+        place-self: center;
+    }
+
+    .next {
+        grid-column: 3;
+        grid-row: 2;
+        place-self: center;
+    }
+
+    #lightbox-modal img {
+        width: 70vw;
+        height: auto;
+    }
+/* End essential styles */
+
+/* Cosmetic styles */
+    #lightbox-modal {
+        background-color: black;
+        color: white;
+    }
+/* End cosmetic styles */
+
+/* Images */
+/* End images */

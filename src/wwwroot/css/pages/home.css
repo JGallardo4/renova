@@ -51,11 +51,13 @@ main { /* Overlap navbar over image slider */
 #previous {
 	grid-column: 1;
 	grid-row: 1;
+	border-radius: 0 3px 3px 0;
 }
 
 #next {
 	grid-column: 3;
 	grid-row: 1;
+	border-radius: 3px 0  0 3px;
 }
 
 #description {
@@ -80,25 +82,7 @@ footer {
 
 	#brand {
 		color: white;
-	}
-
-	.slider-controls {
-		cursor: pointer;
-		outline: none;
-		border: 0;
-		padding: 20px 0 20px 0;
-		width: 100%;
-		color: white;
-		font-weight: bold;
-		font-size: 20px;
-		transition: 0.6s ease;
-		border-radius: 0 3px 3px 0;
-		background: rgba(255,255,255,0.2);
-	}
-
-	.slider-controls:hover {
-		background: black;
-	}
+	}	
 /* End cosmetic styles */
 
 /* Logo styles */
