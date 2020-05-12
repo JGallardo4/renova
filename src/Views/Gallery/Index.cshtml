@@ -24,14 +24,14 @@
 		{
 			var imageUrl = project.Directory + project.Images[i];
 
-			<img src=@imageUrl onclick="openModal();currentSlide(i)" />	
+			<img src=@imageUrl onclick="openModal();currentSlide(@i)" />	
 		}
 	</div>
 
 	<div id="lightbox-modal">
-		<span class="close-icon" onclick="closeModal()">&times;</span>		
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<span class="lightbox-controls" id="close-icon" onclick="closeModal()">&times;</span>		
+		<a class="lightbox-controls" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="lightbox-controls" id="next" onclick="plusSlides(1)">&#10095;</a>
 
 		@for ( int i = 0; i < totalImages; i++ )
 		{
@@ -52,7 +52,7 @@
 <script type="text/javascript">
 	// Open the Modal
 	function openModal() {
-		document.getElementById("lightbox-modal").style.display = "block";
+		document.getElementById("lightbox-modal").style.display = "grid";
 	}
 
 	// Close the Modal
@@ -68,18 +68,22 @@
 		showSlides(slideIndex += n);
 	}
 
+	// Thumbnail controls
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
 	function showSlides(n) {
-		var i;
 		var slides = document.getElementsByClassName("slide");
 
-		if (n > slides.length) {slideIndex = 1}
+		if (n === slides.length) { slideIndex = 0 }
 
-		if (n < 1) {slideIndex = slides.length}
+		if (n === -1) { slideIndex = slides.length - 1 }
 
 		for (i = 0; i < slides.length; i++) {
 			slides[i].style.display = "none";
 		}
 
-		slides[slideIndex - 1].style.display = "block";
+		slides[slideIndex].style.display = "block";
 	}
 </script>

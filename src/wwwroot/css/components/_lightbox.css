@@ -7,7 +7,6 @@
         top: 0;
         height: 100%;
         width: 100%;
-        display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-rows: auto 1fr;
     }
@@ -16,21 +15,22 @@
         display: none;
         grid-column: 2;
         grid-row: 2;
+        place-self: center;
     }
 
-    .close-icon {
+    #close-icon {
         grid-column: 1 / 4;
         grid-row: 1;
         text-align: right;
     }
 
-    .prev {
+    #prev {
         grid-column: 1;
         grid-row: 2;
         place-self: center;
     }
 
-    .next {
+    #next {
         grid-column: 3;
         grid-row: 2;
         place-self: center;
@@ -46,6 +46,17 @@
     #lightbox-modal {
         background-color: black;
         color: white;
+    }
+
+    .lightbox-controls {
+        padding: 20px;
+        font-size: 40pt;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #close-icon {
+        font-size: 55pt;
     }
 /* End cosmetic styles */
 
