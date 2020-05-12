@@ -25,10 +25,12 @@ namespace Renova
             var connectionString = Configuration["Database:ConnectionString"];				
 
 			services.AddDbContext<AppDbContext>(options =>
-				options.UseMySql(connectionString,
+				options.UseMySql(
+                    connectionString,
 					mySqlOptions => 
 					{
 						mySqlOptions.ServerVersion(new Version(10, 4, 12), ServerType.MariaDb);
+                        mySqlOptions.EnableRetryOnFailure();
 					}));
                     
             services.AddControllersWithViews();
