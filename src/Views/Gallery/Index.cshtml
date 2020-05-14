@@ -15,14 +15,14 @@
 
 @foreach (var project in Model)
 {
-	<h1>@project.Name</h1>
+	<h1>@(project.Name + " Project")</h1>
 
 	<div class="image-grid">
 		@{ var totalImages = project.Images.Length; }
 
 		@for ( int i = 0; i < totalImages; i++ )
 		{
-			var imageUrl = project.Directory + project.Images[i];
+			var imageUrl = project.Images[i];
 
 			<img src=@imageUrl onclick="openModal();currentSlide(@i)" />	
 		}
@@ -37,7 +37,7 @@
 		{
 			<div class="slide">
 				@{ 
-				var imageUrl = project.Directory + project.Images[i];
+				var imageUrl = project.Images[i];
 				var currentImage = i + 1;
 				}
 
