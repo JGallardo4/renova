@@ -1,0 +1,82 @@
+@using Renova.Models.Gallery
+
+@model Project
+
+@section Style {
+	<link rel="stylesheet"
+		href="/css/pages/gallery-project.css" />
+}
+
+<h1>@(Model.DisplayName)</h1>
+
+<div class="image-grid">
+	@{ var totalImages = Model.Images.Length; }
+
+	@for ( int i = 0; i < totalImages; i++ )
+	{
+		string imageUrl = Model.Images[i];
+
+		<img src=@imageUrl onclick="openModal();goToSlide(@i)" />	
+	}
+</div>
+
+<div id="lightbox">
+	<span class="lightbox-controls" id="close-icon" onclick="closeModal()">&times;</span>		
+	<a class="lightbox-controls" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="lightbox-controls" id="next" onclick="plusSlides(1)">&#10095;</a>
+
+	@for ( int i = 0; i < totalImages; i++ )
+	{
+		<div class="slide">
+			@{ 
+			var imageUrl = Model.Images[i];
+			var currentImage = i + 1;
+			}
+
+			<div class="place-indicator">@($"{currentImage} / {totalImages}")</div>
+
+			<img src=@imageUrl />	
+		</div>
+	}    
+</div>
+
+@section Scripts {
+  <script type="text/javascript" defer>
+		var lightbox = document.getElementById("lightbox");
+
+		// Thumbnail click action
+		function goToSlide(slideNumber) {
+			showSlides(slideIndex = slideNumber);
+		}
+
+		// Open the Modal
+		function openModal() {
+			lightbox.style.display = "grid";
+		}	
+
+		// Close the Modal
+		function closeModal() {
+			lightbox.style.display = "none";
+		}	
+
+		// Next/previous controls
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}		
+
+		function showSlides(n) {
+			var slides = lightbox
+				.getElementsByClassName("slide");
+
+			if (n === slides.length) { slideIndex = 0 }
+
+			if (n === -1) { slideIndex = slides.length - 1 }
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+
+			slides[slideIndex].style.display = "block";
+		}	
+	</script>
+}

@@ -4,7 +4,7 @@
 
 @section Style {
 	<link rel="stylesheet"
-		href="/css/pages/gallery.css" />
+		href="/css/pages/gallery-index.css" />
 }
 
 @{
@@ -15,75 +15,9 @@
 
 @foreach (var project in Model)
 {
-	<h1>@(project.Name + " Project")</h1>
-
-	<div class="image-grid">
-		@{ var totalImages = project.Images.Length; }
-
-		@for ( int i = 0; i < totalImages; i++ )
-		{
-			var imageUrl = project.Images[i];
-
-			<img src=@imageUrl onclick="openModal();currentSlide(@i)" />	
-		}
-	</div>
-
-	<div id="lightbox-modal">
-		<span class="lightbox-controls" id="close-icon" onclick="closeModal()">&times;</span>		
-		<a class="lightbox-controls" id="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="lightbox-controls" id="next" onclick="plusSlides(1)">&#10095;</a>
-
-		@for ( int i = 0; i < totalImages; i++ )
-		{
-			<div class="slide">
-				@{ 
-				var imageUrl = project.Images[i];
-				var currentImage = i + 1;
-				}
-
-				<div class="place-indicator">@($"{currentImage} / {totalImages}")</div>
-
-				<img src=@imageUrl />	
-			</div>
-		}    
+	<div class="project-grid">
+		<a asp-controller="Gallery" asp-action="Project" asp-route-project="@project.Name">
+			@(project.DisplayName)
+		</a>
 	</div>
 }
-
-<script type="text/javascript">
-	// Open the Modal
-	function openModal() {
-		document.getElementById("lightbox-modal").style.display = "grid";
-	}
-
-	// Close the Modal
-	function closeModal() {
-		document.getElementById("lightbox-modal").style.display = "none";
-	}
-
-	var slideIndex = 1;
-	showSlides(slideIndex);
-
-	// Next/previous controls
-	function plusSlides(n) {
-		showSlides(slideIndex += n);
-	}
-
-	// Thumbnail controls
-	function currentSlide(n) {
-		showSlides(slideIndex = n);
-	}
-
-	function showSlides(n) {
-		var slides = document.getElementsByClassName("slide");
-
-		if (n === slides.length) { slideIndex = 0 }
-
-		if (n === -1) { slideIndex = slides.length - 1 }
-
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-
-		slides[slideIndex].style.display = "block";
-	}
-</script>

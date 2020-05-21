@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Renova.Models.Gallery;
 
@@ -27,8 +26,26 @@ namespace Renova.Data
 
             // Seed Project data
 			modelBuilder.Entity<Project>().HasData(
-				new Project("Duggan"),
-                new Project("Millwoods"));
+				new Project("before-after")
+                {
+                    ProjectId = 1,
+                    DisplayName = "Before and After Gallery",
+                    ThumbnailImage = ""
+                },
+
+                new Project("duggan")
+                {
+                    ProjectId = 2,
+                    DisplayName = "Duggan Project",
+                    ThumbnailImage = ""
+                },
+
+                new Project("millwoods")
+                {
+                    ProjectId = 3,
+                    DisplayName = "Millwoods Project",
+                    ThumbnailImage = ""
+                });
         }
     }
 }

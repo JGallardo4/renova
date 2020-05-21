@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Renova.Data;
 using Renova.Models.Gallery;
+using Renova.ViewModels;
 
 namespace Renova.Controllers
 {
@@ -19,7 +22,7 @@ namespace Renova.Controllers
 		}
 
 		/// <summary>
-		///	Displays the image gallery separated in different sections		
+		///	Displays the image galleries available (One for each project).
 		/// </summary>
 		public IActionResult Index()
 		{
@@ -27,6 +30,27 @@ namespace Renova.Controllers
 				.Projects;
 
 			return View(model);
+		}
+
+		/// <summary>
+		///	Displays the image gallery for a particular project.		
+		/// </summary>
+		public async Task<ViewResult> ProjectAsync(string project)
+		{
+			Project currentProject;
+
+			if(string.IsNullOrEmpty(project))
+			{
+				return View(NotFound());
+			}
+			else
+			{
+				currentProject = await _appDbContext
+					.Projects
+					.SingleOrDefaultAsync(p => p.Name == project);				
+			}
+
+			return View(currentProject);
 		}
 	}
 }

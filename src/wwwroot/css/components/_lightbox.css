@@ -1,5 +1,5 @@
 /* Essential styles */
-    #lightbox-modal {
+    #lightbox {
         display: none;
         position: fixed;
         z-index: 1;
@@ -36,14 +36,14 @@
         place-self: center;
     }
 
-    #lightbox-modal img {
+    #lightbox img {
         width: 70vw;
         height: auto;
     }
 /* End essential styles */
 
 /* Cosmetic styles */
-    #lightbox-modal {
+    #lightbox {
         background-color: black;
         color: white;
     }
@@ -59,6 +59,3 @@
         font-size: 55pt;
     }
 /* End cosmetic styles */
-
-/* Images */
-/* End images */
