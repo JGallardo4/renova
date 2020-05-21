@@ -29,12 +29,12 @@
 
 <script type="text/javascript">
 	// Show controls when javascript is enabled
-	var controls = document.querySelectorAll('.slider-icontrols');
-	for(var i=0; i<controls.length; i++){
+	var controls = document.getElementsByClassName('slider-icontrols');
+	for(var i = 0; i < controls.length; i++){
 		controls[i].style.display = 'inline-block';
 	}
 
-	var slides = document.querySelectorAll('#image-slider .slide');
+	var slides = document.getElementsByClassName('slide');
 	var currentSlide = 0;
 
 	function nextSlide() {

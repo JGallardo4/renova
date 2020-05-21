@@ -11,6 +11,7 @@
 
 	#contact-info ul {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: flex-end;
 	}
 
@@ -22,12 +23,17 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	nav ul li{
 		padding-left: 10px;
 	}
 /* End of layout */
+
+/* Responsiveness */
+	
+/* End of responsiveness */
 
 /* Hamburger menu */
 	.toggle + .toggle-label::before {

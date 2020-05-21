@@ -3,7 +3,6 @@
 
 header {
 	z-index: 3;
-	backdrop-filter: blur(5px);
 }
 
 main { /* Overlap navbar over image slider */ 
@@ -24,9 +23,15 @@ main { /* Overlap navbar over image slider */
 	width: 100%;
 
 	display: grid;
-	grid-template-columns: 70px 1fr 70px;
+	grid-template-columns: auto 1fr auto;
 	grid-template-rows: 1fr;
 	place-items: center;
+}
+
+#logo {
+	height: calc(1.5em + 16vw);
+	max-height: 7em;
+  width: auto;
 }
 
 #description {
@@ -87,15 +92,12 @@ footer {
 
 /* Logo styles */
 	#logo #column,
-	#logo #slogan, {
+	#logo #slogan,
+	#wordmark-body {
 		fill: white;
 	}
 
 	#logo #renova {
 		fill: var(--accent4)
 	}
-
-	#wordmark-body {
-    fill: white;
-  }
 /* End of logo styles */
