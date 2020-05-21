@@ -13,7 +13,7 @@ namespace Renova.Models.Gallery
 		{
 			Name = name;
 
-            string relativePath = Path.Combine("images", "gallery", Name, "after");
+            string relativePath = Path.Combine("images", "gallery", Name);
             string fullPath = Path.GetFullPath(Path.Combine("wwwroot", relativePath));
 
             Images = Directory

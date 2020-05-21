@@ -49,7 +49,7 @@ namespace Renova.Migrations
                         {
                             ProjectId = 1,
                             DisplayName = "Before and After Gallery",
-                            Images = "",
+                            Images = "/images/gallery/before-after/duggan_after_livingroom.jpg;/images/gallery/before-after/duggan_before_livingroom.jpg;/images/gallery/before-after/duggan_before_bathroom.jpg;/images/gallery/before-after/duggan_after_bathroom.jpg",
                             Name = "before-after",
                             ThumbnailImage = ""
                         },
@@ -57,7 +57,7 @@ namespace Renova.Migrations
                         {
                             ProjectId = 2,
                             DisplayName = "Duggan Project",
-                            Images = "/images/gallery/duggan/after/duggan_after_kitchen2.jpg;/images/gallery/duggan/after/duggan_after_kitchen5.jpg;/images/gallery/duggan/after/duggan_after_livingroom3.jpg;/images/gallery/duggan/after/duggan_after_bathroom2.jpg;/images/gallery/duggan/after/duggan_after_livingroom.jpg;/images/gallery/duggan/after/duggan_after_wideshot.jpg;/images/gallery/duggan/after/duggan_after_diningarea.jpg;/images/gallery/duggan/after/duggan_after_kitchen1.jpg;/images/gallery/duggan/after/duggan_after_kitchen4.jpg;/images/gallery/duggan/after/duggan_after_kitchen3.jpg;/images/gallery/duggan/after/duggan_after_bathroom.jpg;/images/gallery/duggan/after/duggan_after_decoratedwide.jpg;/images/gallery/duggan/after/duggan_after_livingroom2.jpg;/images/gallery/duggan/after/duggan_after_backentrance.jpg",
+                            Images = "/images/gallery/duggan/duggan_after_kitchen2.jpg;/images/gallery/duggan/duggan_after_kitchen5.jpg;/images/gallery/duggan/duggan_after_livingroom3.jpg;/images/gallery/duggan/duggan_after_bathroom2.jpg;/images/gallery/duggan/duggan_after_livingroom.jpg;/images/gallery/duggan/duggan_after_wideshot.jpg;/images/gallery/duggan/duggan_after_diningarea.jpg;/images/gallery/duggan/duggan_after_kitchen1.jpg;/images/gallery/duggan/duggan_after_kitchen4.jpg;/images/gallery/duggan/duggan_after_kitchen3.jpg;/images/gallery/duggan/duggan_after_bathroom.jpg;/images/gallery/duggan/duggan_after_decoratedwide.jpg;/images/gallery/duggan/duggan_after_livingroom2.jpg;/images/gallery/duggan/duggan_after_backentrance.jpg",
                             Name = "duggan",
                             ThumbnailImage = ""
                         },
@@ -65,7 +65,7 @@ namespace Renova.Migrations
                         {
                             ProjectId = 3,
                             DisplayName = "Millwoods Project",
-                            Images = "/images/gallery/millwoods/after/millwoods_after_bathroom1.jpg;/images/gallery/millwoods/after/millwoods_after_dining1.jpg;/images/gallery/millwoods/after/millwoods_after_bathroom3.jpg;/images/gallery/millwoods/after/millwoods_after_kitchen2.jpg;/images/gallery/millwoods/after/millwoods_after_bathroom2.jpg;/images/gallery/millwoods/after/millwoods_after_kitchen1.jpg",
+                            Images = "/images/gallery/millwoods/millwoods_after_bathroom1.jpg;/images/gallery/millwoods/millwoods_after_dining1.jpg;/images/gallery/millwoods/millwoods_after_bathroom3.jpg;/images/gallery/millwoods/millwoods_after_kitchen2.jpg;/images/gallery/millwoods/millwoods_after_bathroom2.jpg;/images/gallery/millwoods/millwoods_after_kitchen1.jpg",
                             Name = "millwoods",
                             ThumbnailImage = ""
                         });

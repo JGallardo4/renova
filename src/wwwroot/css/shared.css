@@ -28,3 +28,14 @@
       align-items: center;
     }
 /* End of layout */
+
+/* Wordmark styles */
+  #wordmark {    
+    height: calc(1em + 0.80vw);
+    width: auto;
+  }
+
+  #wordmark-body {
+    fill: black;
+  }
+/* End of logo styles */

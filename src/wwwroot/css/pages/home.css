@@ -87,11 +87,15 @@ footer {
 
 /* Logo styles */
 	#logo #column,
-	#logo #slogan {
+	#logo #slogan, {
 		fill: white;
 	}
 
 	#logo #renova {
 		fill: var(--accent4)
 	}
+
+	#wordmark-body {
+    fill: white;
+  }
 /* End of logo styles */
