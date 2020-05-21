@@ -4,10 +4,6 @@ main a:link {
 	text-decoration: none;
 }
 
-main a:visited {
-	color: var(--bg-accent-color);
-}
-
 main a:hover {
 	transition: color 0.9s;
 	color: var(--accent-color);

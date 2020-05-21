@@ -48,6 +48,7 @@ main { /* Overlap navbar over image slider */
 }
 
 #description a {
+	color: white;
 	padding: 10px;
 	background-color: var(--accent4);
 	border-radius: 5px;
