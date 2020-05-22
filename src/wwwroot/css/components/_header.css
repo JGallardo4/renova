@@ -1,11 +1,16 @@
 /* Layout */
 	header {		
 		display: grid;
+		grid-template-rows: auto auto;
+		align-items: center;
+		margin-bottom: 2rem;
 	}
 
 	#contact-info {
 		display: grid;
 		grid-template-columns: auto 1fr;
+		align-items: center;
+		height: auto;
 		padding: 10px;
 	}
 
@@ -20,8 +25,6 @@
 	}
 
 	nav ul{
-		padding-top: 10px;
-		padding-bottom: 10px;
 		display: flex;
 		flex-wrap: wrap;
 	}

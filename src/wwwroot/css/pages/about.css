@@ -1,2 +1,8 @@
 @import "../shared.css";
 @import "../base/_page.css";
+
+#portrait {
+	shape-outside: circle(50%);
+	padding: 10px;
+  float: right;
+}

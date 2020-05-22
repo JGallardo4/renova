@@ -35,6 +35,12 @@
 /* End of layout */
 
 /* Wordmark styles */
+  #brand {
+    place-self: center;
+    height: calc(1em + 0.80vw);
+    width: auto;
+  }
+
   #wordmark {    
     height: calc(1em + 0.80vw);
     width: auto;

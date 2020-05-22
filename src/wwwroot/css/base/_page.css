@@ -1,6 +1,6 @@
 /* Layout */
 	main {
-		padding: 20px;
+		padding: 10px;
 	}
 /* End of layout */
 
@@ -16,6 +16,6 @@
 	}
 
 	#wordmark-body {
-		fill: var(--accent4);
+		fill: var(--link-button);
 	}
 /* End cosmetic styles */
