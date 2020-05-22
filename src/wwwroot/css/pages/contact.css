@@ -1,4 +1,5 @@
 @import "../shared.css";
+@import "../base/_page.css";
 
 /* Layout */
 	main {
@@ -54,27 +55,12 @@
 		#submit {
 			grid-column: 1 / 3;
 			grid-row: 5;
+			width: 50%;
 		}
 /* End of layout */
 
 /* Cosmetic */
-	#contact-info {
-		color: black;
-		background-color: var(--base);
-	}
-
-	nav {
-		color: white;
-		background-color: var(--accent3);
-	}
-
-	main {
-		color: white;
-		background-color: var(--accent1);
-	}
-
 	#email-form {
-		background-color: var(--accent1);
 		border: solid;
 		border-width: 5px;
 		border-color: white;

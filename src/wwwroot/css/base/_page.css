@@ -1,0 +1,21 @@
+/* Layout */
+	main {
+		padding: 20px;
+	}
+/* End of layout */
+
+/* Cosmetic styles */
+	html {
+		background-color: var(--bg);
+		color: var(--text);
+	}
+
+	header li:hover {
+		transition: color 0.9s;
+		color: white
+	}
+
+	#wordmark-body {
+		fill: var(--accent4);
+	}
+/* End cosmetic styles */

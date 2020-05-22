@@ -23,16 +23,18 @@
 
 		<p>Quality, custom home renovations in Edmonton and area.</p>
 		
-		<a asp-area="" asp-controller="Contact" asp-action="Index">Get a free estimate</a>
+		<a class="button" asp-area="" asp-controller="Contact" asp-action="Index">Get a free estimate</a>
 	</div>	
 </div>
 
 <script type="text/javascript">
 	// Show controls when javascript is enabled
-	var controls = document.getElementsByClassName('slider-icontrols');
-	for(var i = 0; i < controls.length; i++){
-		controls[i].style.display = 'inline-block';
-	}
+	window.onload = function() {
+		var controls = document.getElementsByClassName('slider-controls');
+		for(var i = 0; i < controls.length; i++){
+			controls[i].style.display = 'inline-block';
+		}
+	};	
 
 	var slides = document.getElementsByClassName('slide');
 	var currentSlide = 0;

@@ -15,9 +15,7 @@
 
 @foreach (var project in Model)
 {
-	<div class="project-grid">
-		<a asp-controller="Gallery" asp-action="Project" asp-route-project="@project.Name">
-			@(project.DisplayName)
-		</a>
-	</div>
+	<a class="link" asp-controller="Gallery" asp-action="Project" asp-route-project="@project.Name">
+		@(project.DisplayName)
+	</a><br>
 }

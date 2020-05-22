@@ -1,16 +1,14 @@
 /* Link styles */
-main a:link {
-	color: var(--accent4);
+.link {
 	text-decoration: none;
+	color: var(--link-button)
 }
 
-main a:hover {
+.link:link {
+	color: var(--link-button);
+}
+
+.link:hover {
 	transition: color 0.9s;
-	color: var(--accent-color);
-	text-decoration: none;
-}
-
-main a:active {
-	color: var(--bg-color);
-	text-decoration: none;
+	color: var(--link-hover);	
 }

@@ -27,15 +27,33 @@
       display: grid;
       align-items: center;
     }
+
+    footer div {
+      padding: 10px;
+      font-size: 15pt;
+    }
 /* End of layout */
 
 /* Wordmark styles */
   #wordmark {    
     height: calc(1em + 0.80vw);
     width: auto;
-  }
-
-  #wordmark-body {
-    fill: black;
-  }
+  }  
 /* End of logo styles */
+
+/* Cosmetic styles */
+  .button {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 0.8em; 
+    color: white;
+
+    background-color: var(--link-button);
+    transition: 0.6s ease;        
+  }
+/* End cosmetic styles */

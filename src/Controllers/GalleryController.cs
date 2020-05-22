@@ -1,11 +1,9 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Renova.Data;
 using Renova.Models.Gallery;
-using Renova.ViewModels;
 
 namespace Renova.Controllers
 {

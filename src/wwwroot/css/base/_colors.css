@@ -3,6 +3,13 @@
  */
  
 :root {
+	--bg: #282C34;
+	--text: #ABB2BF;
+	--heading: #DEE2E6;
+	--link-button: #DD7373;
+	--link-hover: #E5C07B;
+
+	/* old theme */
 	--base: #d9dcd6;
 	--accent1: #456990;
 	--accent2: #808080;
