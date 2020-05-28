@@ -13,16 +13,18 @@
 
 <h1>@(Model.DisplayName)</h1>
 
-<div class="image-grid">
+<ul class="image-grid">
 	@{ var totalImages = Model.Images.Length; }
 
 	@for ( int i = 0; i < totalImages; i++ )
 	{
 		string imageUrl = Model.Images[i];
 
-		<img src=@imageUrl onclick="openModal();goToSlide(@i)" />	
+		<li class=".image-container">
+			<img src=@imageUrl onclick="openModal();goToSlide(@i)" />	
+		</li>		
 	}
-</div>
+</ul>
 
 <div id="lightbox">
 	<span class="lightbox-controls" id="close-icon" onclick="closeModal()">&times;</span>		
