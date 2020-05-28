@@ -4,5 +4,8 @@
 #portrait {
 	shape-outside: circle(50%);
 	padding: 10px;
-  float: right;
+	float: right;
+	width: calc(7em + 20vw);
+	max-width: 100%;
+  height: auto;
 }

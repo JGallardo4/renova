@@ -18,10 +18,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
+		gap: 0.5em;
 	}
 
 	#contact-info ul li{
-		padding-left: 10px;
+		text-align: right;
 	}
 
 	nav ul{

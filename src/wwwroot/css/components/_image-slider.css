@@ -81,7 +81,7 @@
 	}
 
 	.slide:nth-of-type(5) {
-		background-image: url("/images/gallery/Millwoods/after/millwoods_after_kitchen1.jpg");
+		background-image: url("/images/gallery/millwoods/millwoods_after_kitchen1.jpg");
 		background-size: cover;
 		filter: brightness(80%);
 	}

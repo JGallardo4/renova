@@ -3,18 +3,18 @@
 
 /* Layout */
 	main {
-		padding: 20px;
+		padding: 0.5em;
 		display: grid;
 		place-items: center;
 	}
 
 	#email-form {
-		padding: 20px;
+		padding: 0.5em;
 		display: grid;
-		grid-template-columns: max-content 1fr;
+		grid-template-columns: auto 1fr;
 		grid-template-rows: auto auto auto 1fr auto;
 		place-items: center;
-		gap: 20px;		
+		gap: 0.5em;		
 	}
 		#name-label {
 			grid-column: 1;
