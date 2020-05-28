@@ -26,17 +26,17 @@ namespace Renova.Migrations
             migrationBuilder.InsertData(
                 table: "Projects",
                 columns: new[] { "ProjectId", "DisplayName", "Images", "Name", "ThumbnailImage" },
-                values: new object[] { 1, "Before and After Gallery", "/images/gallery/before-after/duggan_after_livingroom.jpg;/images/gallery/before-after/duggan_before_livingroom.jpg;/images/gallery/before-after/duggan_before_bathroom.jpg;/images/gallery/before-after/duggan_after_bathroom.jpg", "before-after", "" });
+                values: new object[] { 1, "Before and After Gallery", "/images/gallery/before-after/0_duggan_before_bathroom.jpg;/images/gallery/before-after/1_duggan_after_bathroom.jpg;/images/gallery/before-after/2_duggan_before_livingroom.jpg;/images/gallery/before-after/3_duggan_after_livingroom.jpg", "before-after", "" });
 
             migrationBuilder.InsertData(
                 table: "Projects",
                 columns: new[] { "ProjectId", "DisplayName", "Images", "Name", "ThumbnailImage" },
-                values: new object[] { 2, "Duggan Project", "/images/gallery/duggan/duggan_after_kitchen2.jpg;/images/gallery/duggan/duggan_after_kitchen5.jpg;/images/gallery/duggan/duggan_after_livingroom3.jpg;/images/gallery/duggan/duggan_after_bathroom2.jpg;/images/gallery/duggan/duggan_after_livingroom.jpg;/images/gallery/duggan/duggan_after_wideshot.jpg;/images/gallery/duggan/duggan_after_diningarea.jpg;/images/gallery/duggan/duggan_after_kitchen1.jpg;/images/gallery/duggan/duggan_after_kitchen4.jpg;/images/gallery/duggan/duggan_after_kitchen3.jpg;/images/gallery/duggan/duggan_after_bathroom.jpg;/images/gallery/duggan/duggan_after_decoratedwide.jpg;/images/gallery/duggan/duggan_after_livingroom2.jpg;/images/gallery/duggan/duggan_after_backentrance.jpg", "duggan", "" });
+                values: new object[] { 2, "Duggan Project", "/images/gallery/duggan/duggan_after_backentrance.jpg;/images/gallery/duggan/duggan_after_bathroom.jpg;/images/gallery/duggan/duggan_after_bathroom2.jpg;/images/gallery/duggan/duggan_after_decoratedwide.jpg;/images/gallery/duggan/duggan_after_diningarea.jpg;/images/gallery/duggan/duggan_after_kitchen1.jpg;/images/gallery/duggan/duggan_after_kitchen2.jpg;/images/gallery/duggan/duggan_after_kitchen3.jpg;/images/gallery/duggan/duggan_after_kitchen4.jpg;/images/gallery/duggan/duggan_after_kitchen5.jpg;/images/gallery/duggan/duggan_after_livingroom.jpg;/images/gallery/duggan/duggan_after_livingroom2.jpg;/images/gallery/duggan/duggan_after_livingroom3.jpg;/images/gallery/duggan/duggan_after_wideshot.jpg", "duggan", "" });
 
             migrationBuilder.InsertData(
                 table: "Projects",
                 columns: new[] { "ProjectId", "DisplayName", "Images", "Name", "ThumbnailImage" },
-                values: new object[] { 3, "Millwoods Project", "/images/gallery/millwoods/millwoods_after_bathroom1.jpg;/images/gallery/millwoods/millwoods_after_dining1.jpg;/images/gallery/millwoods/millwoods_after_bathroom3.jpg;/images/gallery/millwoods/millwoods_after_kitchen2.jpg;/images/gallery/millwoods/millwoods_after_bathroom2.jpg;/images/gallery/millwoods/millwoods_after_kitchen1.jpg", "millwoods", "" });
+                values: new object[] { 3, "Millwoods Project", "/images/gallery/millwoods/millwoods_after_bathroom1.jpg;/images/gallery/millwoods/millwoods_after_bathroom2.jpg;/images/gallery/millwoods/millwoods_after_bathroom3.jpg;/images/gallery/millwoods/millwoods_after_dining1.jpg;/images/gallery/millwoods/millwoods_after_kitchen1.jpg;/images/gallery/millwoods/millwoods_after_kitchen2.jpg", "millwoods", "" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -20,6 +20,7 @@ namespace Renova.Models.Gallery
                 .GetFiles(fullPath, "*.jpg")
                 .Select(Path.GetFileName)
                 .Select(f => "/" + relativePath + "/" + f)
+                .OrderBy(f => f)                
                 .ToArray();
 		}
 
