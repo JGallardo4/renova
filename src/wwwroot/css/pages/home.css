@@ -2,7 +2,7 @@
 @import "../components/_image-slider.css";
 
 header {
-	z-index: 3;
+	z-index: 2;
 }
 
 main { /* Overlap navbar over image slider */ 
@@ -67,6 +67,7 @@ main { /* Overlap navbar over image slider */
 footer {
 	border-color: white;
 	color: white;
+	z-index: 2;
 }
 
 /* Cosmetic styles */

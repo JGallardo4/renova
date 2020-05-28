@@ -58,11 +58,15 @@
 		// Open the Modal
 		function openModal() {
 			lightbox.style.display = "grid";
+
+			document.body.style.overflow = "hidden";
 		}	
 
 		// Close the Modal
 		function closeModal() {
 			lightbox.style.display = "none";
+
+			document.body.style.overflow = "auto";
 		}	
 
 		// Next/previous controls
