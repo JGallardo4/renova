@@ -3,7 +3,7 @@
 		display: grid;
 		grid-template-rows: auto auto;
 		align-items: center;
-		margin-bottom: 2rem;
+		margin-bottom: 1em;
 	}
 
 	#contact-info {

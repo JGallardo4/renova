@@ -1,26 +1,29 @@
-@font-face {
-	font-family: "Open Sans", sans-serif;
-	src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 html { 
-	font-size: calc(1em + 0.80vw); 
-	font-family: "Open Sans", "Arial", sans-serif;
+	font-size: calc(1em + 0.80vw);
+	font-family: "Open Sans";
+}
+
+nav {
+	font-family: "Oswald";
 }
 
 p { 
 	font-size: 1em;
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 1rem;	
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: "Oswald";
 	margin-top: 0;
 	margin-bottom: .5rem;
 	font-weight: 600;
 	line-height: 1.1;
 	color: var(--heading);
-	letter-spacing: -.025rem;
+	letter-spacing: -.025rem;	
 }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5em; }
