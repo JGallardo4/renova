@@ -28,10 +28,16 @@
 	nav ul{
 		display: flex;
 		flex-wrap: wrap;
+		text-decoration: underline;
 	}
 
 	nav ul li{
 		padding-left: 10px;
+	}
+
+	nav ul li:hover{
+		transition: color 0.9s;
+		color: var(--link-button)
 	}
 /* End of layout */
 
