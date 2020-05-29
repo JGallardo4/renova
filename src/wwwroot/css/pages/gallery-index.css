@@ -1,2 +1,10 @@
 @import "../shared.css";
 @import "../base/_page.css";
+
+a {
+	color: var(--heading) !important;
+}
+
+a:hover {
+	color: var(--link-button) !important;
+}
