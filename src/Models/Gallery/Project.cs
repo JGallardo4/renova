@@ -13,13 +13,23 @@ namespace Renova.Models.Gallery
 		{
 			Name = name;
 
-            string relativePath = Path.Combine("images", "gallery", Name);
-            string fullPath = Path.GetFullPath(Path.Combine("wwwroot", relativePath));
+            string relativePathFull = Path.Combine("images", "gallery", Name, "full-resolution");
+            string relativePathThumbnail = Path.Combine("images", "gallery", Name, "thumbnails");
 
-            Images = Directory
-                .GetFiles(fullPath, "*.jpg")
+            string fullPathFull = Path.GetFullPath(Path.Combine("wwwroot", relativePathFull));
+            string fullPathThumbnail = Path.GetFullPath(Path.Combine("wwwroot", relativePathThumbnail));
+
+            FullImages = Directory
+                .GetFiles(fullPathFull, "*.jpg")
                 .Select(Path.GetFileName)
-                .Select(f => "/" + relativePath + "/" + f)
+                .Select(f => "/" + relativePathFull + "/" + f)
+                .OrderBy(f => f)                
+                .ToArray();
+
+            ThumbnailImages = Directory
+                .GetFiles(fullPathThumbnail, "*.jpg")
+                .Select(Path.GetFileName)
+                .Select(f => "/" + relativePathThumbnail + "/" + f)
                 .OrderBy(f => f)                
                 .ToArray();
 		}
@@ -38,6 +48,8 @@ namespace Renova.Models.Gallery
 		[StringLength(100)]		
 		public string ThumbnailImage { get; set; }
 
-        public string[] Images { get; }
+        public string[] FullImages { get; }
+
+        public string[] ThumbnailImages { get; }
     }
 }

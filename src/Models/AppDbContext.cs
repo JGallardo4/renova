@@ -18,7 +18,15 @@ namespace Renova.Data
 
             // Set up backing field for sting[]
             modelBuilder.Entity<Project>()
-                .Property(p => p.Images)
+                .Property(p => p.ThumbnailImages)
+                .HasConversion(
+                    v => string.Join(';', v),
+                    v => v.Split(';', StringSplitOptions.RemoveEmptyEntries) 
+                );
+
+            // Set up backing field for sting[]
+            modelBuilder.Entity<Project>()
+                .Property(p => p.FullImages)
                 .HasConversion(
                     v => string.Join(';', v),
                     v => v.Split(';', StringSplitOptions.RemoveEmptyEntries) 

@@ -14,11 +14,11 @@
 <h1>@(Model.DisplayName)</h1>
 
 <ul class="image-grid">
-	@{ var totalImages = Model.Images.Length; }
+	@{ var totalImages = Model.ThumbnailImages.Length; }
 
 	@for ( int i = 0; i < totalImages; i++ )
 	{
-		string imageUrl = Model.Images[i];
+		string imageUrl = Model.ThumbnailImages[i];
 
 		<li class=".image-container">
 			<img src=@imageUrl onclick="openModal();goToSlide(@i)" />	
@@ -35,7 +35,7 @@
 	{
 		<div class="slide">
 			@{ 
-			var imageUrl = Model.Images[i];
+			var imageUrl = Model.FullImages[i];
 			var currentImage = i + 1;
 			}
 
