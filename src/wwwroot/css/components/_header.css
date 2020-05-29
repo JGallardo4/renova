@@ -19,6 +19,14 @@
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		gap: 0.5em;
+		grid-gap: 0.5em;
+		column-gap: 0.5em;
+	}
+
+	@supports not (gap) {
+		#contact-info ul li{
+			padding-left: 0.5em;
+		}
 	}
 
 	#contact-info ul li{
