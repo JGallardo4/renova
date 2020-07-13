@@ -1,78 +1,82 @@
 /* Layout */
-	header {		
-		display: grid;
-		grid-template-rows: auto auto;
-		align-items: center;
-		margin-bottom: 1em;
-	}
+header {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  margin-bottom: 1em;
+}
 
-	#contact-info {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		align-items: center;
-		height: auto;
-		padding: 10px;
-	}
+#contact-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  height: auto;
+  padding: 10px;
+}
 
-	#contact-info ul {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 0.5em;
-	}	
+#contact-info ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
 
-	#contact-info ul li{
-		padding-left: 0.5em;
-		text-align: right;
-	}
-	
-	@supports (gap: 0.5em) {
-		#contact-info ul li{
-			padding: 0;
-		}
-	}
+#contact-info ul li {
+  padding-left: 0.5em;
+  text-align: right;
+}
 
-	nav ul{
-		display: flex;
-		flex-wrap: wrap;
-		text-decoration: underline;
-	}
+@supports (gap: 0.5em) {
+  #contact-info ul li {
+    padding: 0;
+  }
+}
 
-	nav ul li{
-		padding-left: 10px;
-	}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: underline;
+}
 
-	nav ul li:hover {
-		transition: color 0.9s;
-		color: var(--link-button);
-	}
+nav ul li {
+  padding-left: 10px;
+}
+
+nav ul li:hover {
+  transition: color 0.9s;
+  color: var(--link-button);
+}
 /* End of layout */
 
 /* Responsiveness */
-	
+
 /* End of responsiveness */
 
 /* Hamburger menu */
-	.toggle + .toggle-label::before {
-		content: "》 Show";
-	}
+.toggle + .toggle-label::before {
+  content: "》 Show";
+}
 
-	.toggle:checked + .toggle-label::before {
-		content: "︾ Hide";
-	}
+.toggle:checked + .toggle-label::before {
+  content: "︾ Hide";
+}
 
-	.toggle ~ .twitch-embed { display: none; }
-	.toggle:checked ~ .twitch-embed { display: block; }	
+.toggle ~ .twitch-embed {
+  display: none;
+}
+.toggle:checked ~ .twitch-embed {
+  display: block;
+}
 
-	.toggle-label {
-		height: 100%;
-		cursor: pointer;
-		display: grid;
-		place-items: center;
-		color: var(--yellow);
-	}
+.toggle-label {
+  height: 100%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--yellow);
+}
 
-	.toggle { display: none; }
+.toggle {
+  display: none;
+}
 /* Show/Hide stream */
-
-
