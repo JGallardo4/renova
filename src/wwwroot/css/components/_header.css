@@ -19,18 +19,17 @@
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		gap: 0.5em;
-		grid-gap: 0.5em;
-		column-gap: 0.5em;
-	}
-
-	@supports not (gap) {
-		#contact-info ul li{
-			padding-left: 0.5em;
-		}
-	}
+	}	
 
 	#contact-info ul li{
+		padding-left: 0.5em;
 		text-align: right;
+	}
+	
+	@supports (gap: 0.5em) {
+		#contact-info ul li{
+			padding: 0;
+		}
 	}
 
 	nav ul{
@@ -43,9 +42,9 @@
 		padding-left: 10px;
 	}
 
-	nav ul li:hover{
+	nav ul li:hover {
 		transition: color 0.9s;
-		color: var(--link-button)
+		color: var(--link-button);
 	}
 /* End of layout */
 
