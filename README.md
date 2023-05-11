@@ -7,11 +7,18 @@
 ## Deploy
 1. Set the following environment variables:
 - `RENOVA__DB`
-- `RENOVA__ADMIN_EMAIL`
-- `RENOVA__ADMIN_PWD`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__SMTP__HOST`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__SMTP__PORT`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__SMTP__USERNAME`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__SMTP__PWD`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
 
 2. Create Docker image  
 `docker build -t renova-image .`
 
 3. Start Docker container  
-`docker run -e RENOVA__DB -e RENOVA__ADMIN_PWD -e RENOVA__ADMIN_EMAIL -it --rm -p 5089:80 --name renova-container renova-image`
+`docker run -it --rm -p 5089:80 --name renova-container renova-image`
