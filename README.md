@@ -8,6 +8,8 @@
 1. Set the following environment variables:
 - `RENOVA__DB`
 <!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__SENDGRID_API`
+<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
 - `RENOVA__SMTP__HOST`
 <!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
 - `RENOVA__SMTP__PORT`
