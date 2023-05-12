@@ -21,16 +21,6 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// using (var scope = app.Services.CreateScope())
-// {
-//     var services = scope.ServiceProvider;
-//     var serviceProvider = services.GetRequiredService<IServiceProvider>();
-//     var configuration = services.GetRequiredService<IConfiguration>();
-
-// 	AdminInitializer.CreateRoles(serviceProvider, configuration).Wait();
-//     SeedData.Initialize(services);
-// }
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
