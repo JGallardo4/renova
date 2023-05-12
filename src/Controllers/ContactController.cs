@@ -45,13 +45,15 @@ namespace Renova.Controllers
             var to = new EmailAddress(Configuration["TO_ADDRESS"], "Juan Gallardo");
             var subject = $"Inquiry from {model.SenderName} sent via renovacontracting.ca";
 
-            var body = @$"Reply to {model.SenderName} at {model.SenderEmailAddress}
-						Message: \n" + model.Message;
 
-            var msg = MailHelper.CreateSingleEmail(from, to, subject, null, body);
-			Console.WriteLine(msg.Serialize());
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, null, null);
+
+            var body = $"Sent by:\n{model.SenderName} [{model.SenderEmailAddress}]\n\n"
+						+ "Message:\n\n" 
+                        + model.Message;
+            msg.AddContent(MimeType.Text, body);
+
             var response = await client.SendEmailAsync(msg).ConfigureAwait(false);
-			System.Console.WriteLine(response);
 
             return RedirectToAction("Index", "Home");
         }
