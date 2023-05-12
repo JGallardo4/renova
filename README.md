@@ -9,15 +9,8 @@
 - `RENOVA__DB`
 <!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
 - `RENOVA__SENDGRID_API`
-<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
-- `RENOVA__SMTP__HOST`
-<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
-- `RENOVA__SMTP__PORT`
-<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
-- `RENOVA__SMTP__USERNAME`
-<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
-- `RENOVA__SMTP__PWD`
-<!-- "User ID=***;Password=***;Host=***;Database=***;Pooling=***;" -->
+- `RENOVA__TO_ADDRESS`
+- `RENOVA__FROM_ADDRESS`
 
 2. Create Docker image  
 `docker build -t renova-image .`
